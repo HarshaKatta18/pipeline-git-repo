@@ -21,11 +21,12 @@ pipeline {
     }
 
     stage('Test') {
-      steps {
-        echo 'Running tests...'
-        sh 'java -cp src/main/java com.example.HelloDevOpsTest'
-      }
-    }
+  steps {
+    echo 'Running tests...'
+    sh 'java -cp bin com.example.HelloDevOpsTest'
+  }
+}
+
 
     stage('Archive') {
       steps {
